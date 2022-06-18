@@ -28,7 +28,7 @@ export default function NavBar() {
 
     return (
         <>
-        <nav>
+        <nav className='nav-container'>
             <ul className="navMenuItems">
                     {sidebarData.map((item, index) => {
                         return (
@@ -41,39 +41,7 @@ export default function NavBar() {
                     })}
             </ul>
         </nav>
-{/*             <IconContext.Provider value={{ color: '#fff'}}>
 
-            <div className='navbar'>
-                <Link to='#' className='menu-bars'>
-                    <FaBars onClick={showSidebar}/>
-                </Link>
-            </div>
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <ul class='nav-menu-items' onClick={showSidebar}>
-                    <li className="navbar-toggle">
-                    <Link to='#' className='menu-bars'>
-                        <AiOutlineClose /> 
-                    </Link>
-                    </li> 
-                    {sidebarData.map((item, index) => {
-                        return (
-                            <li key={index} className={item.cName}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </nav>
-        </IconContext.Provider> */}
-        {/* 
-            <li><Link to="/home">HOME</Link></li>
-            <li><Link to="/resume">RESUME</Link></li>
-            <li><Link to="/application">APPLICATION</Link></li>
-            <li><Link to="/contact">CONTACT</Link></li>
-        */}
 
     </>
     )

@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
-import {GrClose} from 'react-icons/gr'
+import {AiOutlineClose} from 'react-icons/ai';
 import './signup.css';
 
 
@@ -30,25 +30,28 @@ const SignUp = () => {
     return (
         <div className="signup">
 
-            <IconContext.Provider value={{ color: "white" }}>
-                <div className="close">
-                    <Link to={'/'}>
-                        <GrClose />
-                    </Link>
-                </div>
-            </IconContext.Provider>
+            <div className="close">
+                <IconContext.Provider value={{ color: "#ffffff", size: "2em" }}>
+                        <Link to={'/'}>
+                            <AiOutlineClose />
+                        </Link>
+                </IconContext.Provider>
+            </div>
+            
             <h1>
                 SIGN UP
             </h1>
 
             <form onSubmit={handleSubmit}>
+
                 <label>
-                    NAME
+                    <div className="nameLabel">name</div>
                     <input type="text" name="name" 
                     className="nameInput"
                     value={name} 
                     onChange={ e => setName(e.target.value)}/>
                 </label>
+
                 <input type="submit" value="Submit" className="submitInput" />
                 
             </form>

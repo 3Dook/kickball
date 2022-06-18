@@ -1,5 +1,6 @@
 .header{
     padding: 1.5rem 10px;
+    color: #ffff;
 }
 
 .logo {
@@ -14,19 +15,26 @@
     width: 5.5rem;
     border-radius: 50%;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid;
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 .countdown {
     border-style: solid;
-    border-color: black;
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-left: none;
     border-right: none;
     max-width: 100%;
 }
+

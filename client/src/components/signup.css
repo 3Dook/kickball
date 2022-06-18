@@ -1,8 +1,15 @@
 .signup {
     background-color: rgba(27, 31, 34, 0.85);
-    padding: 20px;
-    margin: 20px;
+    opacity: 0.80;
     color: #ffffff;
+    height: 90vh;
+    width: 90%;
+/*     display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; */
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
 }
 
 
@@ -11,17 +18,41 @@
     display: block;
 
     cursor: pointer; */
-    position: relative;
-    top: 0;
-    right: 0;
+    position: absolute;
+    top: 6%;
+    right: 6%;
 
 }
+
 .signup h1 {
     font-weight: 600;
     line-height: 1.5;
-    margin: 0 0 1rem 0;
+    margin: 0 5% 1rem 5%;
+    margin-top: 10%;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 3px;
+/*     justify-self:flex-start; */
+}
+
+.signup form{
+/*     grid-row-start: 3;
+    grid-row-end: 10; */
+    grid-row: 3 / 11;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nameLabel {
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 5% 1rem 5%;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 3px;
 }
 
 .nameInput {
@@ -29,13 +60,13 @@
     border-radius: 4px;
     border: solid 1px #ffffff;
     color: inherit;
-    display: block;
+    display: inline-block;
     outline: 0;
-    padding: 0 1rem;
+/*     padding: 0 1rem; */
     text-decoration: none;
-    width: 100%;
     height: 2.75rem;
     width: 80%;
+    text-align: center;
 }
 
 .submitInput {
@@ -55,4 +86,5 @@
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
+    margin: 0 5% 1rem 5%;
 }
