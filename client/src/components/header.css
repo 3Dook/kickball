@@ -1,0 +1,32 @@
+.header{
+    padding: 1.5rem 10px;
+}
+
+.logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon {
+    height: 100%;
+    width: 5.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.countdown {
+    border-style: solid;
+    border-color: black;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left: none;
+    border-right: none;
+    max-width: 100%;
+}
