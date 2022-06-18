@@ -1,28 +1,39 @@
 import React, {useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
-import {GrClose} from 'react-icons/gr'
-
-
+import {AiOutlineClose} from 'react-icons/ai';
+import './score.css'
 const domain = "http://localhost:5001/api";
 
 
 const Score = () => {
 
+    const [usa, setUsa] = useState(0);
+    const [oosa, setOosa] = useState(0);
+    const [playerList, setPlayerList] = useState({})
+    
     return (
         <div className="scoreContainer">
 
-            <IconContext.Provider value={{ color: "white" }}>
-                <div className="close">
-                    <Link to={'/'}>
-                        <GrClose />
-                    </Link>
-                </div>
-            </IconContext.Provider>
+            <div className="close">
+                <IconContext.Provider value={{ color: "#ffffff", size: "2em" }}>
+                        <Link to={'/'}>
+                            <AiOutlineClose />
+                        </Link>
+                </IconContext.Provider>
+            </div>
             <h1>
                 SCORE
             </h1>
+            <div className="versusScore">
+                <h1>
 
+                OOSA: {oosa} || USA: {usa} 
+                </h1>
+            </div>
+            <div Player Container>
+
+            </div>
         </div>
 
     )

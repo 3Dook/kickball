@@ -8,7 +8,6 @@ const domain = "http://localhost:5001/api";
 
 const Header = () => {
 
-
     return (
         <div className="header">
             <div className="logo">
@@ -26,13 +25,11 @@ const Header = () => {
                     </h1>
                     <CountDown />
                 </div>
-                <div>
                     
                 <div className="Middle Space">
-                        |
+                |
                 </div>
                 <NavBar/>
-                </div>
             </div>
         </div>
 
