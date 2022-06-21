@@ -15,6 +15,14 @@
     border-bottom: 1px solid #ffffff;
     padding-bottom: 3px;
 }
-
+.versusScore{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.versusScore h1{
+    border-bottom: none;
+}
 
 /* overflow-y: scroll; */

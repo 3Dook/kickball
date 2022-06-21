@@ -11,6 +11,8 @@ const Score = () => {
     const [usa, setUsa] = useState(0);
     const [oosa, setOosa] = useState(0);
     const [playerList, setPlayerList] = useState({})
+
+    
     
     return (
         <div className="scoreContainer">
@@ -26,13 +28,19 @@ const Score = () => {
                 SCORE
             </h1>
             <div className="versusScore">
-                <h1>
+                <Link to={'/roster/usa'}>
+                    <h1>
+                    USA: {usa} 
+                    </h1>
+                </Link>
 
-                OOSA: {oosa} || USA: {usa} 
-                </h1>
-            </div>
-            <div Player Container>
+                vs
 
+                <Link to={'/roster/oosa'}>
+                    <h1>
+                    OOSA: {oosa} 
+                    </h1>
+                </Link>
             </div>
         </div>
 

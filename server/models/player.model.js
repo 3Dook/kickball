@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const PlayerSchema = new Schema({
     name: {type: String, required: true},
-    team: {type: String }
+    team: {type: String, default: ''},
+    record: {type: Array, default: [0,0,0]}
 })
 
 

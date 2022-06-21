@@ -1,0 +1,58 @@
+
+.popOutContainer{
+    background-color: rgba(27, 31, 34, 0.85);
+    color: #ffffff;
+    height: 90vh;
+    width: 90%;
+}
+
+.popOutContainer  h1 {
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 5% 1rem 5%;
+    margin-top: 10%;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+.roster {
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rosterTable {
+/*     font-weight: 600;
+    line-height: 1.5;
+    margin: 0 5% 1rem 5%;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem; */
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*     display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+}
+
+.rosterRow {
+/*     display: inline-flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70vw;
+}
+
+.rosterRow div{
+    border: 1px solid #ffffff;
+    padding: 5px;
+}
+
+

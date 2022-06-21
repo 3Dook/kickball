@@ -7,7 +7,7 @@ router.route('/')
     .get((req,res)=>{
         try{
             Player.find()
-                .then(players => res.status(200).json({blocks: players, Message: "GOOD JOB"}))
+                .then(players => res.status(200).json({players}))
         } catch(e){
             res.status(400).json({Error: e})
         }
@@ -37,8 +37,7 @@ router.route('/:id')
         .then(block =>{
             //Error Check here
             //
-            block.message = req.body.message;
-
+            block.record = req.body.record;
             block.save()
             .then(data => res.status(202).json(data))
             .catch(e => res.status(400).json({Error: "Unable to update" + e}))

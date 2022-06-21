@@ -18,6 +18,10 @@ const sidebarData = [
 /*         icon: < IoHammerOutline />, */
         cName: 'nav-text'
     },
+    {
+        title: 'adminDELETE',
+        path: '/dddMaster'
+    }
 ]
 
 
