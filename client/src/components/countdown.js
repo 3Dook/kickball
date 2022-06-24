@@ -16,8 +16,13 @@ const CountDown = () => {
         const minutes = Math.floor((total / 1000 / 60) % 60);
         const hours = Math.floor((total / 1000 / 60 / 60) % 24);
         const days = Math.floor((total/1000 / 60 / 60 / 24));
-
-        setTimer(`${days}:${hours}:${minutes}:${seconds}`);
+        
+        if (total > 0){
+            setTimer(`${days}:${hours}:${minutes}:${seconds}`);
+        }
+        else{
+            setTimer("LETS PLAY")
+        }
 
     }
 
