@@ -49,7 +49,7 @@ router.route('/:id')
         .then(block =>{
             //Error Check here
             //
-            block.message = req.body.message;
+            block.team = req.body.team;
 
             block.save()
             .then(data => res.status(202).json(data))

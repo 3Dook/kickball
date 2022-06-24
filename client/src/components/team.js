@@ -9,14 +9,21 @@ const domain = "http://localhost:5001/api";
 const Team = (props) => {    
     const [ players,setPlayers ] = useState([{name: "Fake", record: [0,0,0], team:""}])
 
+    const [total, setTotal] = useState(0)
     
 
     const getPlayers = async () =>{
         try{
             const response = await fetch(domain)
             const jsonData = await response.json()
+            
+            const results = jsonData.players.filter(player => player.team === props.teamName)
+            const sum = results.reduce((accum, player)=>{
+                return accum + player.record[0] + player.record[1] + player.record[2];
+            }, 0)
 
-            setPlayers(jsonData.players)
+            setTotal(sum);
+            setPlayers(results);
         } catch(error){
             console.log(error.message);
         }
@@ -61,6 +68,7 @@ const Team = (props) => {
                     })
                     
                     }
+                    <h1>Total: {total}</h1>
                 </div>
 
             </div>
