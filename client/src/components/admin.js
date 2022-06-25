@@ -7,7 +7,7 @@ import './team.css'
 import axios from 'axios';
 
 
-const domain = "http://localhost:5001/api";
+const domain = process.env.REACT_APP_API_URL;
 
 
 const Admin = (props) => {    

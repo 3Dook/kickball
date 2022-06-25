@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PlayersList from './components/players';
 import Header from './components/header';
 import SignUp from './components/signup';
 import Score from './components/score';
@@ -22,13 +21,14 @@ function App() {
     </div>
  */}
     <Router>
+      
       <Routes>
-        <Route path='/' element={<Header/>} />
-        <Route path='/signup' element={<SignUp/>} />
-        <Route path='/score' element={<Score/>} />
-        <Route path='/dddMaster' element={<Admin/>} />
-        <Route path='/roster/usa' element={<Team teamName="usa"/>} />
-        <Route path='/roster/oosa' element={<Team teamName="oosa"/>} />
+          <Route path='/' element={<Header/>} />
+          <Route path='/signup' element={<SignUp/>} />
+          <Route path='/score' element={<Score/>} />
+          <Route path='/dddMaster' element={<Admin/>} />
+          <Route path='/roster/usa' element={<Team teamName="usa"/>} />
+          <Route path='/roster/oosa' element={<Team teamName="oosa"/>} />
 
       </Routes>
     </Router>

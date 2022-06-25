@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
 import {AiOutlineClose} from 'react-icons/ai';
 import './team.css'
-const domain = "http://localhost:5001/api";
+const domain = process.env.REACT_APP_API_URL;
 
 
 const Team = (props) => {    
@@ -16,7 +16,6 @@ const Team = (props) => {
         try{
             const response = await fetch(domain)
             const jsonData = await response.json()
-            
             const results = jsonData.players.filter(player => player.team === props.teamName)
             const sum = results.reduce((accum, player)=>{
                 return accum + player.record[0] + player.record[1] + player.record[2];

@@ -5,7 +5,8 @@ import {AiOutlineClose} from 'react-icons/ai';
 import './signup.css';
 
 
-const domain = "http://localhost:5001/api";
+
+const domain = process.env.REACT_APP_API_URL || "http://localhost:4000/api";
 
 
 const SignUp = () => {
@@ -13,6 +14,7 @@ const SignUp = () => {
     const [name, setName] = useState("")
     const handleSubmit = async e =>{
         e.preventDefault();
+        console.log("the domain name is ", domain)
         try {
             const body = {name}
             const response = await fetch(domain,{

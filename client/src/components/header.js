@@ -3,7 +3,7 @@ import CountDown from "./countdown";
 import { BsGem } from 'react-icons/bs';
 import NavBar from "./navbar";
 import './header.css';
-const domain = "http://localhost:5001/api";
+
 
 
 const Header = () => {

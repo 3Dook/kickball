@@ -22,10 +22,17 @@ mongoose.connect(URI,
 
 //routes
 app.use('/api', require('./routes/players'));
-app.use('*', (req, res)=>{
+/* app.use('*', (req, res)=>{
     res.status(200).json("Please use /api backend")
-})
+}) */
 
+
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static('../client/build'));
+    app.get('/*', function(req,res) {
+		res.sendFile(path.join(__dirname.slice(0,-7),'client', 'build', 'index.html'));
+    });
+}
 
 app.listen(PORT, ()=>{
     console.log(`server has started on port ${PORT}`)
